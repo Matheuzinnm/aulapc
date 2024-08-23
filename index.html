@@ -63,24 +63,20 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
-
-        /* Media Queries */
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                padding: 10px;
-                text-align: center;
-            }
-            .container {
-                width: 100%;
-                padding: 10px;
-            }
+        .donate-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            margin: 20px 0;
+        }
+        .donate-box h2 {
+            color: #007bff;
         }
     </style>
 </head>
@@ -139,10 +135,22 @@
             </ul>
             <img class="large-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQMMn2xKgqbpjXM6MU5AJmNnkm-R8cqvBkA&s" alt="Dicas para Melhorar no Modo CS Ranqueado">
         </section>
+
+        <!-- Caixa de Doações -->
+        <div class="donate-box">
+            <h2>Faça uma Doação</h2>
+            <p>Se você gostou do conteúdo e deseja apoiar o nosso trabalho, considere fazer uma doação. Sua contribuição é muito apreciada!</p>
+            <!-- Adicione seu código de botão de doação do PayPal ou outro serviço aqui -->
+            <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+                <input type="hidden" name="currency_code" value="BRL">
+                <input type="submit" value="Doar com PayPal" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            </form>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; cu alargado.</p>
+        <p>&copy; cu latejando.</p>
     </footer>
 </body>
 </html>
