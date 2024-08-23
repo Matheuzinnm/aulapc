@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trafico de menores</title>
+    <title>Modo CS Ranqueado do Free Fire</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,21 +19,25 @@
             text-align: center;
         }
         nav {
-            margin: 0;
-            padding: 10px;
             background-color: #0056b3;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
+            margin: 5px;
         }
         nav a:hover {
             background-color: #004494;
         }
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
@@ -62,6 +66,21 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                padding: 10px;
+                text-align: center;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -123,4 +142,7 @@
     </div>
 
     <footer>
-        <p>&c
+        <p>&copy; 2024 Free Fire - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
