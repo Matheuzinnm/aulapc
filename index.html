@@ -1,156 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modo CS Ranqueado do Free Fire</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 0;
-            padding: 10px;
-            background-color: #0056b3;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #004494;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        .section {
-            margin-bottom: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .section img.large-image {
-            width: 100%; /* Ajuste a largura conforme necessário */
-            max-width: 1200px; /* Define um tamanho máximo para a imagem */
-        }
-        footer {
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
-        .donate-box {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-            margin: 20px 0;
-        }
-        .donate-box h2 {
-            color: #007bff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recomendador de Jogos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    .box {
+      width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #4c0073;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h2 {
+      color: #4c0073;
+      font-size: 25px;
+    }
+
+    span, input, label {
+      font-size: 18px;
+      margin: 10px;
+      color: #333;
+    }
+
+    .input-container {
+      display: inline-block;
+    }
+
+    iframe {
+      margin-top: 20px;
+      border: 2px solid #4c0073;
+      border-radius: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Modo CS Ranqueado do Free Fire</h1>
-    </header>
-
-    <nav>
-        <a href="#modo">O que é o Modo CS Ranqueado?</a>
-        <a href="#sistema-ranks">Sistema de Ranks</a>
-        <a href="#dicas">Dicas</a>
-    </nav>
-
-    <div class="container">
-        <section id="modo" class="section">
-            <h2>O que é o Modo CS Ranqueado?</h2>
-            <img src="https://freefireclub.com/wp-content/uploads/2020/04/0E9A99FB-EB73-4A6D-B4DF-CF8042F7C51E-1024x621.jpeg" alt="Modo CS Ranqueado do Free Fire">
-            <p>
-                O Modo CS (Counter-Strike) Ranqueado no Free Fire é uma modalidade que traz uma experiência de jogo mais tática e competitiva, inspirada no famoso jogo de tiro tático. Neste modo, duas equipes se enfrentam em um cenário baseado em objetivos, como plantar ou desarmar uma bomba, ou eliminar todos os membros da equipe adversária.
-            </p>
-            <p>
-                O objetivo principal é vencer o maior número de rodadas possíveis para acumular pontos e subir no ranking. Cada partida é composta por um número de rodadas, e as equipes alternam entre ataque e defesa. O Modo CS Ranqueado é ideal para jogadores que buscam uma experiência de jogo mais estratégica e desafiante.
-            </p>
-        </section>
-
-        <section id="sistema-ranks" class="section">
-            <h2>Como Funciona o Sistema de Ranks?</h2>
-            <img src="https://freefireclub.com/wp-content/uploads/2020/06/4331884D-47DA-4585-844C-0F778654FC4F.jpeg" alt="Sistema de Ranks do Modo CS Ranqueado">
-            <p>
-                O sistema de ranks no Modo CS Ranqueado do Free Fire avalia o desempenho dos jogadores em partidas e os classifica em diferentes categorias. Aqui está uma visão geral do sistema de ranks:
-            </p>
-            <ul>
-                <li><strong>Bronze I - III:</strong> Os níveis iniciais onde os jogadores começam a desenvolver suas habilidades no Modo CS.</li>
-                <li><strong>Prata I - III:</strong> Jogadores que mostram um entendimento básico das estratégias e técnicas do jogo.</li>
-                <li><strong>Ouro I - III:</strong> Jogadores com habilidades sólidas e um bom entendimento das estratégias avançadas.</li>
-                <li><strong>Platina I - III:</strong> Jogadores experientes que consistentemente desempenham bem e têm uma boa compreensão do jogo.</li>
-                <li><strong>Diamante I - III:</strong> Jogadores altamente habilidosos e dedicados, geralmente no topo das classificações.</li>
-                <li><strong>Imortal I - III:</strong> Nível para jogadores que demonstram um nível extremo de habilidade e dedicação.</li>
-                <li><strong>Glória:</strong> O rank mais alto, reservado para os melhores jogadores do Modo CS Ranqueado.</li>
-            </ul>
-            <p>
-                Para subir de rank, você deve ganhar partidas e ter um bom desempenho. A perda de partidas e o desempenho abaixo da média podem resultar em perda de pontos e descida de rank.
-            </p>
-        </section>
-
-        <section id="dicas" class="section">
-            <h2>Dicas para Melhorar no Modo CS Ranqueado</h2>
-            <ul>
-                <li><strong>Comunique-se com a Equipe:</strong> A comunicação efetiva é crucial. Use chat de voz ou mensagens para coordenar estratégias e movimentos.</li>
-                <li><strong>Conheça o Mapa:</strong> Estude os mapas e conheça as posições estratégicas, pontos de cobertura e locais de plantio de bombas.</li>
-                <li><strong>Coordene seus Movimentos:</strong> Trabalhe em equipe e planeje suas ações. Evite se separar da equipe e tenha um plano para ataque e defesa.</li>
-                <li><strong>Gerencie seus Recursos:</strong> Administre suas armas, munições e equipamentos de forma eficiente. Aproveite as armas e itens disponíveis para maximizar seu desempenho.</li>
-                <li><strong>Pratique Regularmente:</strong> A prática constante melhora suas habilidades e reflexos. Jogue frequentemente para se aprimorar e adaptar-se a novas estratégias.</li>
-                <li><strong>Analise suas Partidas:</strong> Revise suas partidas para identificar áreas de melhoria. Aprenda com seus erros e acertos para aprimorar suas habilidades.</li>
-            </ul>
-            <img class="large-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsQMMn2xKgqbpjXM6MU5AJmNnkm-R8cqvBkA&s" alt="Dicas para Melhorar no Modo CS Ranqueado">
-        </section>
-
-        <!-- Caixa de Doações -->
-        <div class="donate-box">
-            <h2>Faça uma Doação</h2>
-            <p>Se você gostou do conteúdo e deseja apoiar o nosso trabalho, considere fazer uma doação. Sua contribuição é muito apreciada!</p>
-            <!-- Adicione seu código de botão de doação do PayPal ou outro serviço aqui -->
-            <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
-                <input type="hidden" name="currency_code" value="BRL">
-                <input type="submit" value="Doar com PayPal" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-            </form>
-        </div>
+  <div class="box">
+    <h2>Recomendador de Jogos</h2>
+    
+    <div class="input-container">
+      <span>Sua idade:</span>
+      <input id="idadeInput" type="number" value="5" />
+      <button id="resetButton">Reset</button>
     </div>
 
-    <footer>
-        <p>&copy; cu latejando.</p>
-    </footer>
+    <!-- Iframe para exibir o jogo -->
+    <iframe id="gameIframe" width="485" height="402" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <p id="statusMessage">Em construção</p>
+
+    <script>
+      const gameIframe = document.getElementById('gameIframe');
+      const idadeInput = document.getElementById('idadeInput');
+      const statusMessage = document.getElementById('statusMessage');
+      const resetButton = document.getElementById('resetButton');
+
+      // Mantém o iframe escondido inicialmente
+      gameIframe.classList.add('hidden');
+
+      // Função para exibir o jogo com base na idade
+      function geraRecomendacao(idade) {
+        if (idade == 14) {
+          gameIframe.src = "https://scratch.mit.edu/projects/1073615209/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else if (idade == 16) {
+          gameIframe.src = "https://scratch.mit.edu/projects/712511942/embed";
+          gameIframe.classList.remove('hidden');
+          statusMessage.textContent = "Bom jogo!";
+        } else {
+          gameIframe.classList.add('hidden');
+          statusMessage.textContent = "Em construção";
+        }
+      }
+
+      // Detecta o pressionamento da tecla Enter no campo de idade
+      idadeInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          geraRecomendacao(idadeInput.value);
+          idadeInput.disabled = true; // Bloqueia a edição após a escolha
+        }
+      });
+
+      // Botão de reset para liberar a troca de idade
+      resetButton.addEventListener('click', function() {
+        gameIframe.src = "";
+        statusMessage.textContent = "Em construção";
+        idadeInput.disabled = false; // Libera o campo para alteração
+      });
+    </script>
+  </div>
 </body>
 </html>
